@@ -24,6 +24,7 @@ function addGenre(genre){
     column.innerHTML = genre.name;
     column.style.fontSize ="20px"
     column.style.fontWeight = "bolder"
+    
     gameDiv.append(column);
     levels.forEach(element => {
         const card = document.createElement('div');

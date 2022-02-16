@@ -51,7 +51,7 @@ function addGenre(genre){
 genres.forEach(genre => addGenre(genre));
 
 function flipCard(){
-    // console.log('clicked');
+    
     this.innerHTML = ' ';
     this.style.fontSize = '15px';
     const textDisplay = document.createElement('div');
@@ -59,7 +59,7 @@ function flipCard(){
     const falseButton = document.createElement('button');
     trueButton.innerHTML = 'True';
     falseButton.innerHTML = 'False';
-    //styling button:
+    // adding class name to button for styling
     trueButton.classList.add('true-button');
     falseButton.classList.add('false-button');
 
@@ -95,6 +95,7 @@ function getResult(){
         scoreSpan.innerHTML = score;
         cardOfButton.classList.add('correct-answer');
         sessionStorage.setItem("firstScore", score);//storing the page score in sessionStorage
+        //to pass between the pages.
         //remove all the items from the card using while loop
         setInterval(()=>{
                 while(cardOfButton.firstChild){

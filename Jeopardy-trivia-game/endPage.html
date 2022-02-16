@@ -25,10 +25,10 @@
         perf.style.fontSize ="25px";
         const h4Perf = document.querySelector('h4');
         let totalScore = parseInt(sessionStorage.getItem('Thirdscore'));
-        if(totalScore > 3000){
+        if(totalScore >= 3000){
             perf.innerHTML ="You did amazing, great score!";
         }
-        else if(totalScore < 3000 && totalScore > 1500){
+        else if(totalScore < 3000 && totalScore >= 1500){
             perf.innerHTML = "You did good. Try again!";
         }
         else{

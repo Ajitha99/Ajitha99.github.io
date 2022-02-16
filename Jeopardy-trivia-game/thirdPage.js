@@ -5,11 +5,8 @@ const scoreSpan = document.querySelector('#score');
 let score =  parseInt(sessionStorage.getItem('secondScore'));
 
 
-
+//locat storage:
 //localStorage.setItem('score', '120');
-
-
-
 const genres =[
     {
         name: 'Music',
