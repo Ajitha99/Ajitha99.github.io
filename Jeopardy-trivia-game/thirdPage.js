@@ -2,7 +2,7 @@ const gameDiv = document.querySelector('#game');
 const scoreSpan = document.querySelector('#score');
 
 
-let score = parseInt(sessionStorage.getItem('secondScore'));
+let score =  parseInt(sessionStorage.getItem('secondScore'));
 
 
 
@@ -84,7 +84,7 @@ function flipCard(){
     //getting all the cards and puttin them in an array
     const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.removeEventListener('click', flipCard))
-    sessionStorage.setItem('Thirdscore',score);
+    // sessionStorage.setItem('Thirdscore',score);
 }
 
 
@@ -103,6 +103,7 @@ function getResult(){
         
         scoreSpan.innerHTML = score;
         cardOfButton.classList.add('correct-answer');
+        sessionStorage.setItem('Thirdscore',score);
         //remove all the items from the card using while loop
         setInterval(()=>{
                 while(cardOfButton.firstChild){

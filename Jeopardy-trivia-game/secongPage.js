@@ -76,7 +76,7 @@ function flipCard(){
     //getting all the cards and puttin them in an array
     const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.removeEventListener('click', flipCard))
-    sessionStorage.setItem('secondScore',score);
+    // sessionStorage.setItem('secondScore',score);
 }
 
 
@@ -94,12 +94,14 @@ function getResult(){
         score = score + parseInt(cardOfButton.getAttribute('data-value'));
         scoreSpan.innerHTML = score;
         cardOfButton.classList.add('correct-answer');
+        sessionStorage.setItem('secondScore',score);
         //remove all the items from the card using while loop
         setInterval(()=>{
                 while(cardOfButton.firstChild){
                     cardOfButton.removeChild(cardOfButton.lastChild)
                 }
                 cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
+
         },100)
     }
     else{
