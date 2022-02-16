@@ -14,7 +14,7 @@
         <h4>Your total score is : <span id="totalSpan"></span></h4>
         <h1 id ='performance'></h1>
     </div>
-        <h4 class="welcomeH2">Do you want to play agian!!?</h4>
+        <h4 class="welcomeH2">Do you want to play agian?</h4>
         <!-- <button id = "btnEnter" type="submit">ENTER</button> -->
         <a href="page1.html"><button id="btnHtml">RESTART GAME</button></a>
     </div> 
@@ -25,14 +25,14 @@
         perf.style.fontSize ="25px";
         const h4Perf = document.querySelector('h4');
         let totalScore = parseInt(sessionStorage.getItem('Thirdscore'));
-        if(totalScore > 2000){
+        if(totalScore > 3000){
             perf.innerHTML ="You did amazing, great score!";
         }
-        else if(totalScore < 2000 && totalScore > 1000){
-            perf.innerHTML = "You did good. Try to score high next time";
+        else if(totalScore < 3000 && totalScore > 1500){
+            perf.innerHTML = "You did good. Try again!";
         }
         else{
-            perf.innerHTML = "Sorry you lost. Try again!"
+            perf.innerHTML = "Sorry you lost. Try again!";
         }
         span.innerHTML = totalScore;
         h4Perf.append(span);
