@@ -1,9 +1,13 @@
 const gameDiv = document.querySelector('#game');
 const scoreSpan = document.querySelector('#score');
-
-
-let score =  parseInt(sessionStorage.getItem('secondScore'));
-
+let score = 0;
+// console.log(parseInt(sessionStorage.getItem('secondScore')));
+if(isNaN(parseInt(sessionStorage.getItem('secondScore'))) === false){
+    score =  parseInt(sessionStorage.getItem('secondScore'));
+    }
+else{
+    score = 0;
+}
 
 //locat storage:
 //localStorage.setItem('score', '120');
@@ -22,7 +26,7 @@ const genres =[
     }
 ]
 const levels = ['easy','medium','hard'];
-
+console.log(score);
 function addGenre(genre){
     const column = document.createElement('div')
     column.classList.add('genreColumn');

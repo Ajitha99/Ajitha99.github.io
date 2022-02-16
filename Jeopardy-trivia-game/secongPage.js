@@ -1,7 +1,13 @@
 const gameDiv = document.querySelector('#game');
 const scoreSpan = document.querySelector('#score');
-let score = parseInt(sessionStorage.getItem('firstScore'));
-
+// let score = 0;
+// console.log(isNaN(parseInt(sessionStorage.getItem('firstScore'))));
+if(isNaN(parseInt(sessionStorage.getItem('firstScore'))) === false){
+    score = parseInt(sessionStorage.getItem('firstScore'));
+}
+else{
+    score = 0;
+}
 const genres =[
     {
         name: 'Mathematics',
@@ -17,7 +23,7 @@ const genres =[
     }
 ]
 const levels = ['easy','medium','hard'];
-
+console.log(score);
 function addGenre(genre){
     const column = document.createElement('div')
     column.classList.add('genreColumn');
@@ -74,7 +80,7 @@ function flipCard(){
     //to select the current card- we are using this here
     this.append(textDisplay, trueButton, falseButton);
 
-    //getting all the cards and puttin them in an array
+    //getting all the cards and putting them in an array
     const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.removeEventListener('click', flipCard))
     // sessionStorage.setItem('secondScore',score);

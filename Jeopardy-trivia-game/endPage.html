@@ -25,19 +25,26 @@
         perf.style.fontSize ="25px";
         const h4Perf = document.querySelector('h4');
         let totalScore = parseInt(sessionStorage.getItem('Thirdscore'));
-        if(totalScore >= 3000){
-            perf.innerHTML ="You did amazing, great score!";
-        }
-        else if(totalScore < 3000 && totalScore >= 1500){
-            perf.innerHTML = "You did good. Try again!";
+        // console.log(totalScore)
+        if(isNaN(totalScore) === true){
+            totalScore = 0;
+            span.innerHTML = totalScore;
+            h4Perf.append(span);
         }
         else{
+            if(totalScore >= 3000){
+            perf.innerHTML ="You did amazing, great score!";
+            }
+            else if(totalScore < 3000 && totalScore >= 1500){
+            perf.innerHTML = "You did good. Try again!";
+            }
+            else{
             perf.innerHTML = "Sorry you lost. Try again!";
+            }
+            span.innerHTML = totalScore;
+            h4Perf.append(span);
+            sessionStorage.removeItem('Thirdscore');
         }
-        span.innerHTML = totalScore;
-        h4Perf.append(span);
-        sessionStorage.removeItem('Thirdscore');
-        
     </script>
 </body>
 </html>
