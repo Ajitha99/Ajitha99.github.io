@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(246, 196, 59);
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#game{
+    display: flex;  
+}
+#welcome-screen{
+    display: flex;
+    position: absolute;
+    border-radius: 2em;
+    box-shadow: 0 25px 50px beige;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -220px;
+    background: #99c2c4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgba(192, 75, 8, 0.884);
+    padding:10px;
+    
+}
+#Game-Over{
+    display: flex;
+    position: absolute;
+    border-radius: 2em;
+    box-shadow: 0 25px 50px beige;
+    width: 500px;
+    height: 430px;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -220px;
+    background: #99c2c4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgba(192, 75, 8, 0.884);
+    padding:10px;
+}
+
+.play{
+    font-size: x-large;
+    color: darkgreen;
+}
+.scoreH2{
+    text-decoration: underline;
+    text-shadow: 2px 2px #eb6112;
+}
+.title{
+    font-size: xx-large;
+    text-shadow: 2px 2px #1257eb;  
+}
+#btnHtml{
+    width: 150px;
+    height: 35px;
+    background-color: rgb(139, 208, 211);
+    border: solid white 2px;
+    font-size: medium;
+}
+#totalSpan{
+    color: rgb(13, 116, 13);
+}
+
+.firstRound{
+    font-size: x-large;
+    text-decoration: underline;
+    text-shadow: 2px 2px #eb6112;
+}
+.genreColumn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.card{
+    width: 200px;
+    height: 120px;
+    border: solid rgb(14, 190, 221) 5px;
+    border-radius: 20px;
+    background-color: cadetblue;
+    text-align: center;
+    padding: 5px;
+    margin:10px;
+    font-size: 100px;
+    cursor: pointer;
+}
+.correct-answer{
+    background-color: green;
+    border: green;
+}
+.wrong-answer{
+    background-color: red;
+    border: red;
+}
+.true-button{
+    background-color:rgb(246, 196, 59);
+    border: solid white 2px;
+}
+.false-button{
+   background-color: rgb(246, 196, 59); 
+   border: solid white 2px;
+}
+button{
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.false-button:hover{
+    background: rgb(246, 84, 84);  
+}
+.true-button:hover{
+    background: rgb(92, 189, 92);
+}

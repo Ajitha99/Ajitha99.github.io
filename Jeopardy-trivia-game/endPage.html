@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id = 'Game-Over' style="display: block;">
+        <h3> GAME OVER </h3>
+    <div id = 'scoreDiv'>
+        <h4>Your total score is : <span id="totalSpan"></span></h4>
+        <h1 id ='performance'></h1>
+    </div>
+        <h4 class="welcomeH2">Do you want to play agian!!?</h4>
+        <!-- <button id = "btnEnter" type="submit">ENTER</button> -->
+        <a href="page1.html"><button id="btnHtml">RESTART GAME</button></a>
+    </div> 
+    <script>
+        const divTag = document.getElementById('scoreDiv');
+        const span = document.getElementById('totalSpan');
+        const perf = document.getElementById('performance');
+        perf.style.fontSize ="25px";
+        const h4Perf = document.querySelector('h4');
+        let totalScore = parseInt(sessionStorage.getItem('Thirdscore'));
+        if(totalScore > 2000){
+            perf.innerHTML ="You did amazing, great score!";
+        }
+        else if(totalScore < 2000 && totalScore > 1000){
+            perf.innerHTML = "You did good. Try to score high next time";
+        }
+        else{
+            perf.innerHTML = "Sorry you lost. Try again!"
+        }
+        span.innerHTML = totalScore;
+        h4Perf.append(span);
+        sessionStorage.removeItem('Thirdscore');
+        
+    </script>
+</body>
+</html>
