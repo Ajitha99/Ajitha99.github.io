@@ -1,9 +1,10 @@
 # Ajitha99.github.io
 
-#Module 1- Project
-Title: Jeopardy Game using Trivia API
+#Module 1- Project*******
+Title: Jeopardy Game using Trivia API;
 Netlify Link: https://angry-leavitt-f07952.netlify.app
 
+*************************
 How to play:
 
 Rules: * The game has 5 pages : Welcome Screen, First round, Second round, Final round, Game Over screen.
@@ -18,7 +19,7 @@ Rules: * The game has 5 pages : Welcome Screen, First round, Second round, Final
        * If user wish to play the game again, Play again button is provided on the Game Over screen--> which will lead to first round again.
        
        
-       
+************************      
 Screen Shots of the game:
 
 1. Welcome Screen:
@@ -48,6 +49,8 @@ Screen Shots of the game:
 7. Final Score Screen shot:
 
 <img src = "Jeopardy-trivia-game\.vscode\images\End_game Screen with score displayed.jpg">
+
+
 
 
 
