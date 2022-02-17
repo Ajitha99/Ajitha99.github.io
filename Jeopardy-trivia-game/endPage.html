@@ -12,6 +12,7 @@
         <h3> GAME OVER </h3>
     <div id = 'scoreDiv'>
         <h4>Your total score is : <span id="totalSpan"></span></h4>
+        <h6>Player should score 1500 to win.</h6>
         <h1 id ='performance'></h1>
     </div>
         <h4 class="welcomeH2">Do you want to play agian?</h4>
@@ -33,13 +34,13 @@
         }
         else{
             if(totalScore >= 3000){
-            perf.innerHTML ="You did amazing, great score!";
+            perf.innerHTML ="You Won! Great Score";
             }
             else if(totalScore < 3000 && totalScore >= 1500){
-            perf.innerHTML = "You did good. Try again!";
+            perf.innerHTML = "You Won! Good Score";
             }
             else{
-            perf.innerHTML = "Sorry you lost. Try again!";
+            perf.innerHTML = "Sorry you lost! Good Try!";
             }
             span.innerHTML = totalScore;
             h4Perf.append(span);
